@@ -1,19 +1,40 @@
 {
-  "name": "jsaqa_3",
+  "name": "third_homework_part1",
   "version": "1.0.0",
   "description": "jest test",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "eslint": "eslint",
+    "prettier": "prettier",
+    "coverage": "jest --collectCoverage"
   },
   "keywords": [
     "jest",
-    "test",
-    "jsaqa"
+    "test"
   ],
-  "author": "omelnikova",
+  "author": "alexander",
   "license": "ISC",
+  "dependencies": {
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-unicorn": "^43.0.2"
+  },
   "devDependencies": {
-    "jest": "^27.3.1"
-  }
+    "jest": "^27.3.1",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "2.7.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/coverage/**",
+      "!**/.vscode/**"
+     ],
+     "coverageThreshold": {
+       "branches": 100,
+       "functions": 100,
+       "lines": 100
+ }
+ }
 }
